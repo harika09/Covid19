@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,400&display=swap");
+
+:root {
+  /* FONTS */
+  --Roboto: "Roboto", sans-serif;
+  --Roboto300: 300;
+  --Roboto400: 400;
+  --Roboto500: 500;
+}
+
+:root {
+  /* Colors */
+  --Primary-color: #ff577f;
+  --White-color: #fff;
+  --Black-color: #111;
+  --Pale-White: #f7f7f7;
+  --Dark-blue: #09015f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Roboto);
+}
+
+li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Black-color);
+}
+
+/*--========== Layout ==========--*/
+.bd-container {
+  max-width: 1024px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .bd-container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/*--========== Layout END ==========--*/
+
+/*--========== Header ==========--*/
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+header.sticky {
+  background-color: var(--White-color);
+  padding: 20px 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+header.sticky .nav-menu li a {
+  color: var(--Black-color);
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+}
+
+.nav-active {
+  color: var(--Primary-color);
+}
+
+.logo i {
+  color: var(--Primary-color);
+  margin-right: 2px;
+  font-size: 1.5rem;
+}
+
+.button {
+  outline: none;
+  border-style: none;
+  background-color: var(--White-color);
+  padding: 10px 20px;
+  border: 1px solid var(--Primary-color);
+  cursor: pointer;
+}
+/*--========== Heahder END ==========--*/
+
+/*--========== Banner Section ==========--*/
+.banner-content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/img/coronavirus.png),
+    url(/assets/img/coronavirus.png);
+  background-repeat: no-repeat no-repeat;
+  background-position: right top 10%, left 10% bottom 20%;
+  background-size: 20%;
+}
+
+.banner-text h1 {
+  max-width: 450px;
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-text span {
+  color: var(--Primary-color);
+}
+
+.banner-text p {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.discover {
+  background-color: var(--Primary-color);
+  outline: none;
+  border-style: none;
+  color: var(--White-color);
+  padding: 15px 30px;
+}
+
+.discover:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.banner-img .medical-care {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  float: right;
+}
+/*--========== Banner Section END ==========--*/
+
+/*--========== Cases Section ==========--*/
+.covid-cases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.covid img {
+  display: block;
+  width: 75px;
+  height: auto;
+  margin: auto;
+}
+
+.covid h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.covid span {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+/* .border-line {
+  border-style: solid;
+  border-width: thin;
+  max-width: 80%;
+  margin: 80px auto;
+  border-color: black;
+  opacity: 0.5;
+} */
+
+.covid-information {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.covid-img img {
+  width: 650px;
+  max-width: 100%;
+  height: auto;
+}
+
+.covid-info {
+  position: relative;
+  background-image: url(/assets/img/coronavirus.png),
+    url(/assets/img/coronavirus.png), url(/assets/img/coronavirus.png),
+    url(/assets/img/coronavirus.png), url(/assets/img/coronavirus.png);
+  background-repeat: no-repeat;
+  background-position: left 0%, right 20%, left 48%, right 59%, center 77%;
+  background-size: 10%, 10%, 7%, 10%, 8%;
+}
+.covid-info h2 {
+  margin-top: 40px;
+  font-size: 2.5rem;
+  color: var(--Dark-blue);
+}
+
+.covid-info .underline {
+  position: absolute;
+  top: 75px;
+  display: flex;
+  border-style: solid;
+  border-width: thick;
+  width: 28%;
+  border-color: var(--Primary-color);
+}
+
+.covid-text p {
+  margin-top: 10px;
+  font-weight: 350;
+}
+
+.covid-info .info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.covid-info .info i {
+  margin-top: 20px;
+  margin-right: 10px;
+  color: var(--Primary-color);
+}
+
+.covid-info button {
+  margin-top: 20px;
+}
+/*--========== Cases Section END ==========--*/
+
+/*--========== Media Query ==========--*/
+@media (max-width: 900px) {
+  header .nav-menu {
+    display: none;
+  }
+  .banner-content {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-img {
+    display: none;
+  }
+
+  .banner-text p {
+    max-width: 650px;
+  }
+
+  .covid-information {
+    grid-template-columns: 1fr;
+  }
+}
