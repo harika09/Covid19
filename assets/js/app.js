@@ -36,3 +36,19 @@ for(var i = 0; i < navActive.length; i++){
     });
 }
 
+
+const modalView = document.getElementById('modalView');
+const buttonModal = document.getElementById('buttonModal');
+const closed = document.getElementById('closed');
+
+
+buttonModal.addEventListener('click', function(){
+    modalView.style.display = "block";
+})
+
+closed.onclick = function(){
+    modalView.style.display = "none";
+}
+
+
+
