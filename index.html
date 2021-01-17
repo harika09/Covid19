@@ -11,6 +11,8 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+  
+
 </head>
 <body>
     <!--========== Header Content ==========-->
@@ -21,9 +23,9 @@
             <div class="menu-toggle"></div>
             <ul class="nav-menu">
                 <li><a href="#" class="nav-item nav-active">Home</a></li>
-                <li><a href="#" class="nav-item">Pages</a></li>
-                <li><a href="#" class="nav-item">Prevention</a></li>
-                <li><a href="#" class="nav-item">News</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#prevention" class="nav-item">Prevention</a></li>
+                <li><a href="#news" class="nav-item">News</a></li>
                 <li><a href="#" class="nav-item">Contact</a></li>
             </ul>
 
@@ -38,25 +40,73 @@
         <section class="banner-container">
             <div class="banner-content bd-container">
                <div class="banner-text">
-                <h1 class="banner-title">Stay Safes<span>.</span> Stay Home<span>.</span></h1>
+                <h1 class="banner-title">Stay Safe<span>.</span> Stay Home<span>.</span></h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur mollitia quaerat in minus, quasi debitis libero suscipit </p>
 
                 <button type="button" class="discover">Discover More</button>
                </div>
 
+               
+            
+            <div class="covid-cases-container">
+                
+                <div class="modalView" id="modalView">
+                   <div class="modalView-content bd-container">
+                   <span id="closed"> <i class="fas fa-times-circle" ></i></span>
+                        <input type="text" name="country" id="list-country" placeholder="Enter your Country">
+                        <i class="fas fa-search"></i>
+                    
+                    <ul id="countryList">
+                    </ul>
 
-               <div class="banner-img">
-                <img class="medical-care" src="/assets/img/medical-care.svg" alt="medical-care">
+                   </div>
+                </div>
+
+                <div class="covid-cases">
+
+                    <div class="covid world-cases">
+                        <img src="/assets/img/world.png" alt="world">
+                        <h2 id="country">World</h2>
+                        <span>Total Cases</span>
+                    </div>
+
+                    <div class="covid active-cases">
+                        <img src="/assets/img/virus.png" alt="virus">
+                        <h2 id="activeCases"></h2>
+                        <span>Total Case</span>
+                    </div>
+
+                    <div class="covid active-cases">
+                        <img src="/assets/img/rehabilitation.png" alt="rehabilitation">
+                        <h2 id="recovered"></h2>
+                        <span>Total recovered</span>
+                    </div>
+
+                    <div class="covid active-cases">
+                        <img src="/assets/img/tombstone.png" alt="tombstone">
+                        <h2 id="deceased"></h2>
+                        <span>Total deaths</span>
+                    </div>
+
+                 </div>
+
+                 <button type="button" class="btn-modal" id="buttonModal">Check your County?</button>
              </div>
+
+               <!-- <div class="banner-img">
+                <img class="medical-care" src="/assets/img/medical-care.svg" alt="medical-care">
+             </div> -->
 
             </div>
         </section>
         <!--========== Banner Section END ==========-->
 
-        <section class="cases-container">
+
+        <!--========== Cases Section ==========-->
+        <section class="cases-container" id="about">
             <div class="cases-content bd-container">
 
-                <div class="covid-cases">
+                <!-- <div class="covid-cases">
 
                 <div class="covid world-cases">
                     <img src="/assets/img/world.png" alt="world">
@@ -82,7 +132,7 @@
                     <span>Total deaths</span>
                 </div>
                 
-             </div>
+             </div> -->
 
              <div class="covid-information">
 
@@ -133,9 +183,263 @@
 
             <!-- <div class="border-line"></div> -->
         </section>
+        <!--========== Cases Section END ==========-->
+
+        <!--========== Symptoms Section ==========-->
+        <section class="symptoms-container">
+            <div class="symptoms-content bd-container">
+                <h2 class="title">How Virus Spreading</h2>
+                <span class="underline"></span>
+                <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus ipsa consequuntur nihil! Nobis, at necessitatibus.</p>
+
+                <div class="cards-container">
+
+                    <div class="cards">
+                        <i class="fas fa-head-side-cough"></i>
+                        <strong >Trouching Objects that cough or sneeze droplets</strong>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ullam!</p>
+                    </div>
+
+                    <div class="cards">
+                        <i class="fas fa-hands-helping"></i>
+                        <strong>From close contact with an infected person</strong>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ullam!</p>
+                    </div>
+
+                    <div class="cards">
+                        <i class="fas fa-cat"></i>
+                        <strong>Precaution should be taken to covid contact with animal</strong>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ullam!</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="corona-symptoms-container">
+                <div class="corona-symptoms bd-container">
+
+                    <div class="doctor-woman">
+                        <img src="/assets/img/doctor-woman.svg" alt="doctor-woman">
+                    </div>
+                    
+                    <div class="symptoms">
+                        <h2>Corona symptoms</h2>
+                        <span class="underline"></span>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam beatae, reiciendis deleniti provident natus.</p>
+    
+                        <div class="list-symptoms">
+    
+                            <div class="list">
+                                <img src="/assets/img/fever.png" alt="fever">
+                                <div class="list-info">
+                                    <h3>High Fever</h3>
+                                <p>Even if you have mild symptoms like a headache and runny nose, stay in until you’re better.</p>
+                                </div>
+                            </div>
+    
+                            <div class="list">
+                                <img src="/assets/img/cough.png" alt="cough">
+                                <div class="list-info">
+                                    <h3>Cough and Sneezing</h3>
+                                <p>dry cough is a COVID-19 symptom that can cause pain, and cough</p>
+                                </div>
+                            </div>
+    
+                            <div class="list">
+                                <img src="/assets/img/difficulty-breathing.png" alt="difficulty-breathing">
+                                <div class="list-info">
+                                    <h3>Shortness of Breath</h3>
+                                <p>chest pain may indicate that a clot is causing a blockage or other serious danger in your arteries.</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                   
+    
+                </div>
+            </div>
+        </section>
+        <!--========== Symptoms Section END ==========-->
+
+         <!--========== Prevention Section ==========-->
+         <section class="prevention-container" id="prevention">
+            <div class="prevention-content bd-container">
+                <h2 class="title">Corona Prevention</h2>
+                <div class="underline"></div>
+                <p class="text">Protect yourself and others around you by knowing the facts and taking appropriate precautions. Follow advice provided by your local health authority.</p>
+
+                <!-- <div class="bubble message">
+                    <span>Things Do</span>
+                </div> -->
+
+            
+                <div class="prevention-cards">
+
+
+                    <div class="prevent">
+                        <div class="prevent-img">
+                            <img src="/assets/img/washing-hands.png" alt="washing-hands">
+                        </div>
+
+                        <div class="prevent-info">
+                            <span>Wash your Hands</span>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, deserunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="prevent">
+                        <div class="prevent-img">
+                           <img src="/assets/img/protection.png" alt="protection">
+                        </div>
+
+                        <div class="prevent-info">
+                            <span>Don't Touch Face</span>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, deserunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="prevent">
+                        <div class="prevent-img">
+                            <img src="/assets/img/mask.png" alt="mask">
+                        </div>
+
+                        <div class="prevent-info">
+                            <span>Wear Mask</span>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, deserunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="prevent">
+                        <div class="prevent-img">
+                            <img src="/assets/img/social-distancing.png" alt="social-distancing">
+                        </div>
+
+                        <div class="prevent-info">
+                            <span>Avoid Touching other people</span>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, deserunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="prevent">
+                        <div class="prevent-img">
+                            <img src="/assets/img/cough-cover.png" alt="cough-cover">
+                        </div>
+
+                        <div class="prevent-info">
+                            <span>Cover your Cough</span>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, deserunt.</p>
+                        </div>
+                    </div>
+
+                    <div class="prevent">
+                        <div class="prevent-img">
+                            <img src="/assets/img/hydroalcoholic-gel.png" alt="">
+                        </div>
+
+                        <div class="prevent-info">
+                            <span>Contaminated Objects</span>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, deserunt.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            
+        </section>
+        <!--========== Prevention Section  END ==========-->
+
+        <!--========== Risk Section ==========-->
+        <section class="risk-container">
+            <div class="risk-content bd-container">
+                <div class="risk-image">
+                    <img src="/assets/img/family.png" alt="">
+                </div>
+
+                <div class="risk-info">
+                    <h2>Who is At Risk?</h2>
+                    <div class="underline"></div>
+                    <p>People of all ages can be infected by the new coronavirus (2019-nCoV). Older people, and people with pre-existing medical conditions (such as asthma, diabetes, heart disease) appear to be more vulnerable to becoming severely ill with the virus.</p>
+                </div>
+            </div>
+        </section>
+        <!--========== Risk Section END ==========-->
+
+        <!--========== News Section ==========-->
+        <section class="news-container" id="news">
+            <div class="news-content bd-container swiper-container">
+
+                <h2 class="title">News & Articles</h2>
+                <div class="underline"></div>
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos at ducimus odit nihil quo nemo!</p>
+
+                <div class="slide-show-container swiper-wrapper">
+
+                    <div class="slide-show swiper-slide">
+                        <img src="/assets/img/wash-hands.jpeg" alt="washing-hands">
+                        <p > Discover 10 ways to stay safe from virus </p>
+                        <a href="#" >Read More</a>
+                    </div>
+
+                    <div class="slide-show swiper-slide">
+                        <img src="/assets/img/wash-hands.jpeg" alt="washing-hands">
+                        <p > Discover 10 ways to stay safe from virus </p>
+                        <a href="#" >Read More</a>
+                    </div>
+
+                    <div class="slide-show swiper-slide">
+                        <img src="/assets/img/wash-hands.jpeg" alt="washing-hands">
+                        <p > Discover 10 ways to stay safe from virus </p>
+                        <a href="#" >Read More</a>
+                    </div>
+
+                    <div class="slide-show swiper-slide">
+                        <img src="/assets/img/wash-hands.jpeg" alt="washing-hands">
+                        <p > Discover 10 ways to stay safe from virus </p>
+                        <a href="#" >Read More</a>
+                    </div>
+
+                    <div class="slide-show swiper-slide">
+                        <img src="/assets/img/wash-hands.jpeg" alt="washing-hands">
+                        <p > Discover 10 ways to stay safe from virus </p>
+                        <a href="#" >Read More</a>
+                    </div>
+
+                </div>
+
+                 <!-- Add Pagination -->
+                 <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+        <!--========== News Section END ==========-->
+
+       
     </main>
     <!--========== Main Section  END ==========-->
 
+
+     <!-- JQeury -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+
+       <!-- Swiper Js -->
+       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+       <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     
+     <!-- Sweet Alert -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <!-- Main Js -->
+    <script src="assets/js/swiper.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="/assets/js/cases.js"></script>
 </body>
