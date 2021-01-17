@@ -49,6 +49,7 @@ a {
   .bd-container {
     margin-right: auto;
     margin-left: auto;
+    padding: 0 1rem;
   }
 }
 /*--========== Layout END ==========--*/
@@ -256,7 +257,6 @@ header.sticky .nav-menu li a {
 
 .list-of-countries {
   list-style-type: none;
-  list-style-type: none;
   background-color: var(--Primary-color);
   color: var(--White-color);
   border-radius: 3px;
@@ -278,6 +278,7 @@ header.sticky .nav-menu li a {
 
 .list-of-countries .list-of-cases {
   display: flex;
+  flex-direction: row;
   gap: 20px;
 }
 
@@ -698,9 +699,31 @@ header.sticky .nav-menu li a {
     display: none;
   } */
 
+  .banner-text {
+    margin-top: 40px;
+    grid-row: 2;
+  }
+
+  .covid-cases-container {
+    margin-top: 120px;
+  }
+
   .banner-text p {
     max-width: 650px;
   }
+
+  #countryList {
+    grid-template-columns: 1fr;
+  }
+
+  .list-of-countries h2 {
+    text-align: center;
+  }
+
+  .list-of-countries .list-of-cases {
+    flex-direction: column;
+  }
+
   /*--========== Banner Section END ==========--*/
 
   /*--========== Cases Section ==========--*/
