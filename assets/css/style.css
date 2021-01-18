@@ -402,10 +402,16 @@ header.sticky .nav-menu li .nav-active {
 
 .cards {
   max-width: 100%;
-  padding: 40px;
+  padding: 20px;
   background-color: var(--White-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 40px;
+}
+
+.cards:hover,
+.cards:hover i {
+  background-color: var(--Primary-color);
+  color: var(--White-color);
 }
 
 .cards i {
@@ -420,13 +426,11 @@ header.sticky .nav-menu li .nav-active {
 
 .cards strong {
   display: block;
-  max-width: 230px;
   margin-bottom: 20px;
   font-size: 1rem;
 }
 
 .cards p {
-  max-width: 280px;
   font-weight: var(--Poppins300);
 }
 
@@ -543,7 +547,6 @@ header.sticky .nav-menu li .nav-active {
 }
 
 .prevent .prevent-info span {
-  display: block;
   color: var(--Primary-color);
   font-size: 0.9rem;
   margin-bottom: 10px;
@@ -553,6 +556,16 @@ header.sticky .nav-menu li .nav-active {
   font-size: 0.8rem;
   font-weight: var(--Poppins300);
 }
+
+.prevent:hover {
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+}
+
+.prevent:hover .prevent-info span {
+  color: var(--White-color);
+}
+
 /*--========== Prevention Section END ==========--*/
 
 /*--========== Risk Section END ==========--*/
@@ -633,6 +646,11 @@ header.sticky .nav-menu li .nav-active {
   margin-top: 10px;
   display: block;
   text-align: center;
+  background-color: var(--Primary-color);
+  padding: 5px;
+  width: 50%;
+  color: var(--White-color);
+  margin: auto;
 }
 
 .slide-show img {
@@ -641,13 +659,15 @@ header.sticky .nav-menu li .nav-active {
   max-width: 100%;
   height: auto;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .slide-show p {
-  margin-top: 10px;
   text-align: center;
   max-width: 300px;
   margin: auto;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
 }
 /* Swiper Slide */
 .swiper-container {
@@ -655,6 +675,89 @@ header.sticky .nav-menu li .nav-active {
   height: 100%;
 }
 /*--========== News Section END ==========--*/
+
+/*--========== Footer Section ==========--*/
+.footer-container {
+  margin-top: 120px;
+  background-color: #1a508b;
+}
+.footer-content {
+  padding: 40px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  color: var(--White-color);
+}
+
+.about-social-media {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-title {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.about-info p {
+  font-size: 0.9rem;
+  font-weight: var(--Poppins300);
+  margin-bottom: 20px;
+}
+
+.about-social-media .icons {
+  background-color: var(--White-color);
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: var(--Black-color);
+}
+
+.about-social-media .icons:hover {
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+  cursor: pointer;
+}
+
+.footer-content li a {
+  color: var(--White-color);
+  opacity: 0.8px;
+}
+
+.footer-content li a:hover {
+  color: var(--Primary-color);
+}
+
+.footer-content li {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.subscribe {
+  padding: 8px;
+  outline: none;
+  border: none;
+  background-color: var(--Primary-color);
+  color: white;
+  margin-top: 15px;
+  width: 60%;
+}
+
+.subscribe:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*--========== Footer Section END ==========--*/
 
 /*--========== Media Query ==========--*/
 @media (max-width: 900px) {
@@ -774,11 +877,25 @@ header.sticky .nav-menu li .nav-active {
 
   .cards p {
     margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .cards strong {
+    max-width: 100%;
+  }
+
+  .corona-symptoms-container {
+    background-color: var(--Background-color);
+    padding: 10px;
   }
 
   .corona-symptoms {
     margin-top: 60px;
     grid-template-columns: 1fr;
+  }
+
+  .symptoms {
+    padding-bottom: 40px;
   }
 
   .corona-symptoms .underline {
@@ -792,7 +909,6 @@ header.sticky .nav-menu li .nav-active {
 
   /*--========== Risk Section ==========--*/
 
-  /*--========== Risk Section End ==========--*/
   .risk-content {
     grid-template-columns: 1fr;
   }
@@ -821,6 +937,39 @@ header.sticky .nav-menu li .nav-active {
   .message {
     left: 35%;
   }
+  /*--========== Risk Section End ==========--*/
+
+  /*--========== Footer Section ==========--*/
+
+  .footer-content {
+    padding: 40px 0px;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .about-info p {
+    max-width: 450px;
+  }
+
+  .newsLetter-content {
+    grid-row: 1;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .links-content {
+    margin-bottom: 40px;
+  }
+
+  .about-social-media {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 20px;
+  }
+
+  /*--========== Footer Section END ==========--*/
 }
 
 @media (max-width: 600px) {
@@ -878,7 +1027,7 @@ header.sticky .nav-menu li .nav-active {
 
   .symptoms h2 {
     margin-top: 40px;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .symptoms p {
@@ -886,7 +1035,7 @@ header.sticky .nav-menu li .nav-active {
   }
 
   .symptoms .underline {
-    top: 80px;
+    top: 70px;
     width: 30%;
   }
 
