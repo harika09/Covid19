@@ -50,10 +50,10 @@ const displayCharacters = (data) => {
                 <h2>${datas.country}</h2>
 
                 <div class="list-of-cases">
-                <p>Total Cases: ${datas.cases}</p>
-                <p>Today's Case: ${datas.todayCases}</p>
-                <p>Recovered: ${datas.recovered}</p>
-                <p>Deaths: ${datas.deaths}</p>
+                <p>Total Cases: ${formatNumber(datas.cases)}</p>
+                <p>Today's Case: ${formatNumber(datas.todayCases)}</p>
+                <p>Critical: ${formatNumber(datas.critical)} </p>
+                <p> Deaths: ${formatNumber(datas.deaths)} </p>
                 </div>
             </li>
         `;
