@@ -1,4 +1,6 @@
-$("#btn-send").click(function(){
+$("#btn-send").click(function(e){
+    
+    e.preventDefault();
 
     const contactName = document.getElementById('contact-name').value;
     const contactEmail = document.getElementById('contact-email').value;
