@@ -63,6 +63,11 @@ function invalidEmail(){
 }
 
 function validEmail(){
+    
+    document.getElementById('contact-name').value = "";
+    document.getElementById('contact-email').value = "";
+    document.getElementById('contact-message').value = "";
+    
     Swal.fire({
         position: 'center',
         icon: 'success',
