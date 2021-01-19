@@ -6,7 +6,7 @@ $("#btn-send").click(function(){
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
     if(contactName === '' || contactEmail === '' || contactMessage === ''){
-        alert("Fields cannot be empty");
+        emptyFields();
         
     } else if(contactEmail.match(pattern)){
         validEmail();
@@ -67,6 +67,14 @@ function validEmail(){
         title: 'Subscription Confirm!',
         text: 'Thank you for subscribing!',
         showConfirmButton: true,
+      })
+}
+
+function emptyFields(){
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Fields cannnot be empty',
       })
 }
 
