@@ -101,9 +101,6 @@ header.sticky .nav-menu li .nav-active {
 
 .logo img {
   width: 45px;
-  color: var(--Primary-color);
-  margin-right: 2px;
-  font-size: 1.5rem;
 }
 /*--========== Safety-tips Section ==========--*/
 
@@ -287,6 +284,11 @@ input[type="email"] {
     background: url(/assets/img/icon-close.svg) no-repeat;
     background-size: 25px;
   }
+  
+  .logo img {
+  width: 35px;
+}
+
 
   /*--========== Header END ==========--*/
 
