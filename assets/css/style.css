@@ -326,6 +326,11 @@ header.sticky .nav-menu li .nav-active {
   font-weight: var(--Poppins300);
 }
 
+.covid-text a {
+  display: inline-block;
+  margin-top: 20px;
+}
+
 .covid-info .info {
   margin-top: 10px;
   display: flex;
@@ -337,10 +342,6 @@ header.sticky .nav-menu li .nav-active {
   margin-top: 20px;
   margin-right: 10px;
   color: var(--Primary-color);
-}
-
-.covid-info button {
-  margin-top: 20px;
 }
 
 .covid-info .discover a {
