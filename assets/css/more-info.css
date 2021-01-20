@@ -156,31 +156,7 @@ header.sticky .nav-menu li .nav-active {
 }
 /*--========== Safety-tips Section END  ==========--*/
 
-/*--========== Home-tips Section ==========--*/
 
-.home-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.home-tips-info .home-info {
-  display: flex;
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.home-tips-icon i {
-  color: var(--Primary-color);
-}
-
-.home-image img {
-  display: block;
-  width: 280px;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-}
-/*--========== Home-tips Section ==========--*/
 
 /*--========== Footer Section ==========--*/
 .footer-container {
