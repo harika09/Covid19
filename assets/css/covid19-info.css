@@ -176,7 +176,7 @@ header.sticky .nav-menu li .nav-active {
 }
 
 .about-info p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: var(--Poppins300);
   margin-bottom: 20px;
 }
@@ -222,7 +222,7 @@ input[type="email"] {
   outline: none;
   border: none;
   background-color: var(--Primary-color);
-  color: white;
+  color: color: var(--White-color);;
   margin-top: 15px;
   width: 60%;
 }
