@@ -99,7 +99,8 @@ header.sticky .nav-menu li .nav-active {
   color: var(--Primary-color);
 }
 
-.logo i {
+.logo img {
+  width: 45px;
   color: var(--Primary-color);
   margin-right: 2px;
   font-size: 1.5rem;
