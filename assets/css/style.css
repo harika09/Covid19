@@ -193,6 +193,7 @@ header.sticky .nav-menu li .nav-active {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   overflow-y: initial;
+  border-radius: 4px;
 }
 
 .modalView-content {
@@ -203,12 +204,17 @@ header.sticky .nav-menu li .nav-active {
   width: 80%;
   height: 80vh;
   overflow-y: auto;
+  border-radius: 4px;
 }
 
 .modalView #list-country {
-  padding: 10px;
   width: 100%;
-  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 35px;
+  margin-bottom: 16px;
 }
 
 .modalView input[type="text"] {
@@ -235,11 +241,11 @@ header.sticky .nav-menu li .nav-active {
   /* Closed button*/
   display: block;
   right: 20px;
-  margin-bottom: 10px;
   font-size: 2rem;
   position: absolute;
-  top: -15px;
+  top: 5px;
   cursor: pointer;
+  color: var(--Primary-color);
 }
 
 #countryList {
@@ -298,8 +304,8 @@ header.sticky .nav-menu li .nav-active {
     url(/assets/img/coronavirus.png), url(/assets/img/coronavirus.png),
     url(/assets/img/coronavirus.png), url(/assets/img/coronavirus.png);
   background-repeat: no-repeat;
-  background-position: left 0%, right 20%, left 50%, right 62%, center 80%;
-  background-size: 6%, 10%, 7%, 7%, 6%;
+  background-position: left 0%, right 20%, left 47%, right 62%, center 80%;
+  background-size: 6%, 10%, 6%, 7%, 6%;
 }
 .covid-info h2 {
   margin-top: 10px;
@@ -309,8 +315,7 @@ header.sticky .nav-menu li .nav-active {
 
 .covid-info .underline {
   position: absolute;
-  top: 75px;
-  display: flex;
+  top: 55px;
   border-style: solid;
   border-width: thick;
   width: 28%;
@@ -337,6 +342,10 @@ header.sticky .nav-menu li .nav-active {
 
 .covid-info button {
   margin-top: 20px;
+}
+
+.covid-info .discover a {
+  color: var(--White-color);
 }
 /*--========== Cases Section END ==========--*/
 
@@ -869,6 +878,10 @@ input[type="email"] {
 
   .banner-text p {
     max-width: 650px;
+  }
+
+  .list-of-countries .list-of-cases {
+    gap: 1px;
   }
 
   .covid-cases {
