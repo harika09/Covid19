@@ -39,7 +39,9 @@ srLeft.reveal(`.btn-modal,
     .covid-img,
     .cards-one,
     .doctor-woman,
-    .risk-image`,{
+    .risk-image,
+    .health-image,
+    .fight-covid`,{
     interval: 100
 })
 
@@ -54,6 +56,8 @@ const srRigth = ScrollReveal({
 srRigth.reveal(`.covid-info,
     .cards-three,
     .list,
-    .risk-info`,{
+    .risk-info,
+    .tips,
+    .what-is-corona-info`,{
     interval: 100
 })
