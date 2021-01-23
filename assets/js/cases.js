@@ -32,7 +32,7 @@ Searchcountry.addEventListener('keyup', (e) =>{ //Search data on API
 
 const loadCountry = async() =>{ //parsing data
     try{
-        const api_URL = "https://coronavirus-19-api.herokuapp.com/countries";
+        const api_URL = "https://disease.sh/v3/covid-19/countries" //"https://coronavirus-19-api.herokuapp.com/countries";
         const response = await fetch(api_URL)
         emptyArray = await response.json();
         displayCharacters(emptyArray)
@@ -52,7 +52,7 @@ const displayCharacters = (data) => {
                 <div class="list-of-cases">
                 <p>Total Cases: ${formatNumber(datas.cases)}</p>
                 <p>Today's Case: ${formatNumber(datas.todayCases)}</p>
-                <p>Critical: ${formatNumber(datas.critical)} </p>
+                <p>Recovered: ${formatNumber(datas.recovered)} </p>
                 <p> Deaths: ${formatNumber(datas.deaths)} </p>
                 </div>
             </li>
