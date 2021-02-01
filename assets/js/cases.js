@@ -47,7 +47,10 @@ const displayCharacters = (data) => {
     const htmlString = data.map((datas) => {
             return `
             <li class="list-of-countries">
-                <h2>${datas.country}</h2>
+                <div class="country-name">
+                    <h2>${datas.country}</h2> 
+                    <img class="flag" src="${datas.countryInfo.flag}" alt="${datas.country}">
+                </div>
 
                 <div class="list-of-cases">
                 <p>Total Cases: ${formatNumber(datas.cases)}</p>
