@@ -283,6 +283,7 @@ header.sticky .nav-menu li .nav-active {
 .list-of-countries .flag {
   width: 75px;
   height: auto;
+  max-width: 100%;
 }
 
 .list-of-countries .country-name {
