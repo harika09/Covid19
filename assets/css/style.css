@@ -280,6 +280,16 @@ header.sticky .nav-menu li .nav-active {
   gap: 20px;
 }
 
+.list-of-countries .flag {
+  width: 75px;
+  height: auto;
+}
+
+.list-of-countries .country-name {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*--========== Banner Section END ==========--*/
 
 /*--========== Cases Section ==========--*/
