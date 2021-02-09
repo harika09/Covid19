@@ -4,13 +4,15 @@
 
 Link: https://covid19-project-app.netlify.app/
 
-Credits to the owner of the API: https://disease.sh/v3/covid-19/countries 
-
 Langauge Used:
   - html
   - Css
   - Js
   - Swiper Js
+
+Credits to the owner of the API: https://disease.sh/v3/covid-19/countries 
+
+
 
 - List of Countries with Corona virus
   - Total active cases
