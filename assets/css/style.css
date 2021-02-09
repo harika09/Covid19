@@ -264,7 +264,7 @@ header.sticky .nav-menu li .nav-active {
 }
 
 .list-of-countries h2 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .list-of-countries p {
@@ -280,8 +280,9 @@ header.sticky .nav-menu li .nav-active {
 }
 
 .list-of-countries .flag {
-  width: 75px;
+  width: 55px;
   height: auto;
+  border-radius: 2px;
 }
 
 .list-of-countries .country-name {
@@ -774,11 +775,16 @@ header.sticky .nav-menu li .nav-active {
 
 .about-social-media .icons {
   background-color: var(--White-color);
-  border-radius: 100%;
-  padding: 5px 9px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  padding-top: 8px;
+  text-align: center;
   font-size: 0.9rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: var(--Black-color);
+  margin-right: 10px;
 }
 
 .about-social-media .icons:hover {

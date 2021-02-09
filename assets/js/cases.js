@@ -43,9 +43,6 @@ const loadCountry = async() =>{ //parsing data
 };
 
 
-
-
-
 const displayCharacters = (data) => {
 
     const htmlString = data.map((datas) => {
