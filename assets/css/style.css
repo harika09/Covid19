@@ -1159,6 +1159,10 @@ input[type="email"] {
 
   /*--========== News Section ==========--*/
 
+  .about-social-media .icons {
+    margin-right: 15px;
+  }
+
   .news-content .underline {
     top: 30px;
     left: 30%;
