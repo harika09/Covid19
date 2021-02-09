@@ -48,7 +48,7 @@ const displayCharacters = (data) => {
             return `
             <li class="list-of-countries">
                 <div class="country-name">
-                    <h2>${datas.country}</h2> 
+                    <h2 class="country">${datas.country}</h2> 
                     <img class="flag" src="${datas.countryInfo.flag}" alt="${datas.country}">
                 </div>
 
@@ -96,50 +96,6 @@ worldCases().catch(error => {
 });
 
 
-
-
-/*button.addEventListener("click", function(){
-  
-    async function CountryCases(){
-        var Countries = country.value;
-        const api_URL = `https://coronavirus-19-api.herokuapp.com/countries/${Countries}`;
-        const response = await fetch(api_URL)
-        const data = await response.json()
-    
-      if(Countries == ''){
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Country is empty',
-          })
-        } else{
-            totalCases.innerHTML = formatNumber(data.cases);
-            recovered.innerHTML = formatNumber(data.recovered);
-            deceased.innerHTML = formatNumber(data.deaths)
-        
-    
-            countryName.innerHTML = data.country;
-        
-            $(totalCases).counterUp({delay:10, time:1000}); //animating numbers
-            $(recovered).counterUp({delay:10, time:1000});
-            $(deceased).counterUp({delay:10, time:1000});
-        }
-     
-    
-        //console.log(data.cases);
-    }
-
-    CountryCases().catch(error => {
-        console.log('error');
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Invalid Country',
-          })
-    }); 
-      
-   
-})*/
 
 
 
