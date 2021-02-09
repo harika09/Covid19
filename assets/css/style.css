@@ -774,9 +774,12 @@ header.sticky .nav-menu li .nav-active {
 
 .about-social-media .icons {
   background-color: var(--White-color);
-  border-radius: 100%;
-  padding: 5px 9px;
-  font-size: 0.9rem;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: var(--Black-color);
 }
