@@ -782,6 +782,7 @@ header.sticky .nav-menu li .nav-active {
   padding: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   color: var(--Black-color);
+  margin-right: 10px;
 }
 
 .about-social-media .icons:hover {
