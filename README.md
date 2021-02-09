@@ -2,6 +2,8 @@
 
 <h2>Features</h2>
 
+Link: https://covid19-project-app.netlify.app/
+
 - List of Countries with Corona virus
   - Total active cases
   - Today's cases
