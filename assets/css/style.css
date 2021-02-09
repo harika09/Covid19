@@ -103,7 +103,6 @@ header.sticky .nav-menu li .nav-active {
   width: 45px;
 }
 
-
 /*--========== Heahder END ==========--*/
 
 /*--========== Banner Section ==========--*/
@@ -814,7 +813,7 @@ input[type="email"] {
   outline: none;
   border: none;
   background-color: var(--Primary-color);
-  color: color: var(--White-color);
+  color: var(--White-color);
   margin-top: 15px;
   width: 60%;
 }
@@ -876,11 +875,10 @@ input[type="email"] {
     background: url(/assets/img/icon-close.svg) no-repeat;
     background-size: 25px;
   }
-  
-  .logo img {
-  width: 35px;
-}
 
+  .logo img {
+    width: 35px;
+  }
 
   /*--========== Banner Section ==========--*/
   .banner-content {
@@ -1068,10 +1066,10 @@ input[type="email"] {
     font-size: 1rem;
   }
 
-.list-of-countries .flag {
-  width: 25px;
-  height: 25px;
-}
+  .list-of-countries .flag {
+    width: 25px;
+    height: 25px;
+  }
 
   /*--========== Banner Section END ==========--*/
 
