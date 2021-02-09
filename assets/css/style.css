@@ -1,0 +1,1184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap");
+:root {
+  /* FONTS */
+  --Poppins: "Poppins", sans-serif;
+  --Poppins300: 300;
+  --Poppins400: 400;
+}
+
+:root {
+  /* Colors */
+  --Primary-color: #ff577f;
+  --White-color: #fff;
+  --Black-color: #111;
+  --Pale-White: #f7f7f7;
+  --Dark-blue: #09015f;
+  --Background-color: #8ecae6;
+  --Background-color2: #a9294f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Black-color);
+}
+
+/*--========== Layout ==========--*/
+.bd-container {
+  max-width: 1024px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .bd-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 1rem;
+  }
+}
+/*--========== Layout END ==========--*/
+
+/*--========== Header ==========--*/
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+header.sticky {
+  background-color: var(--White-color);
+  padding: 20px 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+header.sticky .nav-menu li a {
+  color: var(--Black-color);
+}
+
+header .nav-menu li a:hover {
+  color: var(--Primary-color);
+}
+
+.nav-menu {
+  position: relative;
+  display: flex;
+}
+
+header.sticky .nav-menu li .nav-active {
+  /* Change color when .active-nav addeed to li a */
+  color: var(--Primary-color);
+}
+
+.nav-menu li .nav-active {
+  color: var(--Primary-color);
+}
+
+.logo img {
+  width: 45px;
+}
+
+/*--========== Heahder END ==========--*/
+
+/*--========== Banner Section ==========--*/
+.banner-content {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/img/coronavirus.png),
+    url(/assets/img/coronavirus.png);
+  background-repeat: no-repeat no-repeat;
+  background-position: right top 10%, left 10% bottom 20%;
+  background-size: 8%, 10%;
+}
+
+.banner-text h1 {
+  max-width: 450px;
+  font-size: 4.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-text span {
+  color: var(--Primary-color);
+}
+
+.banner-text p {
+  font-weight: var(--Poppins300);
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.discover {
+  background-color: var(--Primary-color);
+  outline: none;
+  border-style: none;
+  color: var(--White-color);
+  padding: 15px 30px;
+}
+
+.discover:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.covid-cases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.covid:nth-child(3),
+.covid:nth-child(4) {
+  margin-top: 50px;
+}
+
+.covid img {
+  display: block;
+  width: 105px;
+  height: auto;
+  margin: auto;
+}
+
+.covid h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.covid span {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: var(--Poppins300);
+}
+.modalView {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow-y: initial;
+  border-radius: 4px;
+}
+
+.modalView-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80vh;
+  overflow-y: auto;
+  border-radius: 4px;
+}
+
+.modalView #list-country {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 35px;
+  margin-bottom: 16px;
+}
+
+.modalView input[type="text"] {
+  position: relative;
+}
+
+.btn-modal {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--Primary-color);
+  display: block;
+  margin: auto;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.modalView .modalView-content {
+  position: relative;
+}
+
+.modalView .modalView-content span {
+  /* Closed button*/
+  display: block;
+  right: 20px;
+  font-size: 2rem;
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+  color: var(--Primary-color);
+}
+
+#countryList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.list-of-countries {
+  list-style-type: none;
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+.list-of-countries h2 {
+  font-size: 2rem;
+}
+
+.list-of-countries p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.list-of-countries .list-of-cases {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.list-of-countries .flag {
+  width: 75px;
+  height: auto;
+}
+
+.list-of-countries .country-name {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*--========== Banner Section END ==========--*/
+
+/*--========== Cases Section ==========--*/
+
+.covid-information {
+  margin-top: 50px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.covid-img img {
+  width: 650px;
+  max-width: 100%;
+  height: auto;
+}
+
+.covid-info {
+  position: relative;
+  background-image: url(/assets/img/coronavirus.png),
+    url(/assets/img/coronavirus.png), url(/assets/img/coronavirus.png),
+    url(/assets/img/coronavirus.png), url(/assets/img/coronavirus.png);
+  background-repeat: no-repeat;
+  background-position: left 0%, right 20%, left 47%, right 62%, center 80%;
+  background-size: 6%, 10%, 6%, 7%, 6%;
+}
+.covid-info h2 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  color: var(--Dark-blue);
+}
+
+.covid-info .underline {
+  position: absolute;
+  top: 55px;
+  border-style: solid;
+  border-width: thick;
+  width: 28%;
+  border-color: var(--Primary-color);
+}
+
+.covid-text p {
+  margin-top: 10px;
+  font-weight: var(--Poppins300);
+}
+
+.covid-text a {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.covid-info .info {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.covid-info .info i {
+  margin-top: 20px;
+  margin-right: 10px;
+  color: var(--Primary-color);
+}
+
+.covid-info .discover a {
+  color: var(--White-color);
+}
+/*--========== Cases Section END ==========--*/
+
+/*--========== Symptoms Section ==========--*/
+.symptoms-container {
+  margin-top: 100px;
+}
+
+.symptoms-content {
+  position: relative;
+  background-image: url(/assets/img/coronavirus.png),
+    url(/assets/img/coronavirus.png);
+  background-repeat: no-repeat;
+  background-position: bottom 30% left 4%, top 48% right 10%;
+  background-size: 10%, 8%;
+}
+
+.symptoms-content .underline {
+  position: absolute;
+  top: 45px;
+  left: 42%;
+  display: flex;
+  border-style: solid;
+  border-width: thick;
+  width: 15%;
+  border-color: var(--Primary-color);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--Dark-blue);
+  margin-bottom: 10px;
+}
+
+.text {
+  text-align: center;
+  margin: auto;
+  max-width: 680px;
+  font-weight: var(--Poppins300);
+}
+
+.cards-container {
+  margin-top: 40px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards {
+  max-width: 100%;
+  padding: 20px;
+  background-color: var(--White-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+
+.cards:hover,
+.cards:hover i {
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+}
+
+.cards i {
+  display: block;
+  margin: auto;
+  max-width: 100px;
+  font-size: 3rem;
+  color: var(--Primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards strong {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.cards p {
+  font-weight: var(--Poppins300);
+}
+
+.corona-symptoms-container {
+  background-color: var(--Background-color);
+  padding: 40px;
+}
+.corona-symptoms {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.symptoms {
+  position: relative;
+}
+
+.symptoms h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: var(--Dark-blue);
+}
+
+.symptoms .underline {
+  position: absolute;
+  top: 45px;
+  left: 0%;
+  display: flex;
+  border-style: solid;
+  border-width: thick;
+  width: 28%;
+  border-color: var(--Primary-color);
+}
+
+.symptoms p {
+  font-weight: var(--Poppins300);
+}
+
+.doctor-woman img {
+  display: block;
+  max-width: 160px;
+  height: auto;
+  margin: auto;
+}
+
+.list-symptoms .list {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.list-symptoms .list .list-symptoms-img img {
+  width: 80px;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.list .list-info h3 {
+  margin-bottom: 10px;
+}
+
+.list .list-info p {
+  font-weight: var(--Poppins300);
+}
+/*--========== Symptoms Section END ==========--*/
+
+/*--========== Prevention Section ==========--*/
+
+.prevention-content {
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 60px;
+}
+
+.prevention-content .underline {
+  position: absolute;
+  top: 43px;
+  left: 39%;
+  display: flex;
+  border-style: solid;
+  border-width: thick;
+  width: 15%;
+  border-color: var(--Primary-color);
+}
+
+.prevention-cards {
+  position: relative;
+}
+
+.prevention-cards {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center center;
+}
+
+.prevent {
+  background-color: var(--White-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 15px 10px;
+  border-radius: 60px 0 0 60px;
+  max-width: 400px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.prevent .prevent-img {
+  background-color: var(--Primary-color);
+  width: 75px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 50%;
+}
+
+.prevent-img img {
+  display: block;
+  width: 25px;
+}
+
+.prevent .prevent-info span {
+  color: var(--Primary-color);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.prevent .prevent-info p {
+  font-size: 0.8rem;
+  font-weight: var(--Poppins300);
+}
+
+.prevent:hover {
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+}
+
+.prevent:hover .prevent-info span {
+  color: var(--White-color);
+}
+
+/*--========== Prevention Section END ==========--*/
+
+/*--========== Risk Section END ==========--*/
+.risk-container {
+  background-color: var(--Background-color2);
+  color: var(--White-color);
+}
+
+.risk-content {
+  padding: 40px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.risk-content .risk-image img {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+}
+.risk-info {
+  position: relative;
+}
+
+.risk-content .risk-info h2 {
+  font-size: 2.5rem;
+}
+
+.risk-content .risk-info .underline {
+  position: absolute;
+  top: 45px;
+  left: 0%;
+  display: flex;
+  border-style: solid;
+  border-width: thick;
+  width: 18%;
+  border-color: var(--Primary-color);
+}
+.risk-content .risk-info p {
+  font-weight: var(--Poppins300);
+  margin-top: 20px;
+}
+
+/*--========== Risk Section END ==========--*/
+
+/*--========== News Section ==========--*/
+.news-content {
+  margin-top: 20px;
+}
+
+.news-content .underline {
+  position: absolute;
+  top: 45px;
+  left: 40%;
+  display: flex;
+  border-style: solid;
+  border-width: thick;
+  width: 18%;
+  border-color: var(--Primary-color);
+}
+
+.slide-show-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.slide-show {
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slide-show a {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  background-color: var(--Primary-color);
+  padding: 5px;
+  width: 50%;
+  color: var(--White-color);
+  margin: auto;
+}
+
+.slide-show img {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.slide-show p {
+  text-align: center;
+  max-width: 300px;
+  margin: auto;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+/* Swiper Slide */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+/*--========== News Section END ==========--*/
+
+/*--========== Contact Section ==========--*/
+
+.contact-container {
+  margin-top: 80px;
+}
+/* .contact-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+} */
+
+.contact-form {
+  margin-top: 50px;
+  background-color: var(--White-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+}
+
+.contact-form h3 {
+  margin-bottom: 10px;
+}
+.contact-validate {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .contact-validate #contact-email,
+.contact-validate #contact-name,
+.contact-validate #contact-message {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+.contact-validate #contact-message {
+  resize: none;
+}
+
+.contact-form .btn-send {
+  background-color: var(--Primary-color);
+  outline: none;
+  border: none;
+  color: var(--White-color);
+  padding: 10px 50px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form .btn-send:hover {
+  opacity: 0.5;
+}
+
+/*--========== Contact Section END ==========--*/
+/*--========== Footer Section ==========--*/
+.footer-container {
+  margin-top: 120px;
+  background-color: #1a508b;
+}
+.footer-content {
+  padding: 40px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  color: var(--White-color);
+}
+
+.about-social-media {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-title {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.about-info p {
+  font-size: 0.8rem;
+  font-weight: var(--Poppins300);
+  margin-bottom: 20px;
+}
+
+.about-social-media .icons {
+  background-color: var(--White-color);
+  border-radius: 100%;
+  padding: 5px 9px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: var(--Black-color);
+}
+
+.about-social-media .icons:hover {
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+  cursor: pointer;
+}
+
+.footer-content li a {
+  color: var(--White-color);
+  opacity: 0.8px;
+}
+
+.footer-content li a:hover {
+  color: var(--Primary-color);
+}
+
+.footer-content li {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.subscribe {
+  padding: 8px;
+  outline: none;
+  border: none;
+  background-color: var(--Primary-color);
+  color: var(--White-color);
+  margin-top: 15px;
+  width: 60%;
+}
+
+.subscribe:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/*--========== Footer Section END ==========--*/
+
+/*--========== Media Query ==========--*/
+@media (max-width: 900px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  header .nav-menu {
+    display: none;
+  }
+
+  header .nav-menu.active {
+    width: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 550px;
+    background-color: var(--White-color);
+    position: fixed;
+    top: 78px;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+  }
+
+  header .nav-menu li {
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+
+  header .nav-menu li a {
+    font-size: 1.4rem;
+    color: var(--Black-color);
+    font-weight: var(--Poppins400);
+  }
+
+  .menu-toggle {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background: url(/assets/img/icon-hamburger.svg) no-repeat;
+    background-size: 25px;
+    cursor: pointer;
+  }
+
+  .menu-toggle.active {
+    background: url(/assets/img/icon-close.svg) no-repeat;
+    background-size: 25px;
+  }
+
+  .logo img {
+    width: 35px;
+  }
+
+  /*--========== Banner Section ==========--*/
+  .banner-content {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-text {
+    margin-top: 60px;
+  }
+
+  .banner-text p {
+    max-width: 650px;
+  }
+
+  .list-of-countries .list-of-cases {
+    gap: 1px;
+  }
+
+  .covid-cases {
+    margin-top: 40px;
+  }
+
+  #countryList {
+    grid-template-columns: 1fr;
+  }
+
+  .list-of-countries h2 {
+    text-align: center;
+  }
+
+  .list-of-countries .list-of-cases {
+    flex-direction: column;
+  }
+
+  /*--========== Banner Section END ==========--*/
+
+  /*--========== Cases Section ==========--*/
+  .covid-information {
+    grid-template-columns: 1fr;
+  }
+
+  .covid-img img {
+    display: block;
+    margin: auto;
+  }
+
+  .covid-info {
+    background-position: left 0%, right 21%, left 51%, right 62%, center 79%;
+    background-size: 7%, 7%, 5%, 7%, 5%;
+  }
+  /*--========== Cases Section END ==========--*/
+
+  /*--========== Symptoms Section ==========--*/
+  .symptoms-content {
+    padding-left: 10px;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+    place-items: center center;
+  }
+
+  .cards {
+    width: 70%;
+  }
+  .cards strong,
+  .cards p {
+    margin: auto;
+  }
+
+  .cards p {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .cards strong {
+    max-width: 100%;
+  }
+
+  .corona-symptoms-container {
+    background-color: var(--Background-color);
+    padding: 10px;
+  }
+
+  .corona-symptoms {
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+  }
+
+  .symptoms {
+    padding-bottom: 40px;
+  }
+
+  .corona-symptoms .underline {
+    width: 18%;
+  }
+  .corona-symptoms p {
+    max-width: 450px;
+  }
+
+  /*--========== Symptoms Section END ==========--*/
+
+  /*--========== Risk Section ==========--*/
+
+  .risk-content {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-info {
+    margin-top: 15px;
+    grid-row: 1;
+  }
+
+  .risk-info h2 {
+    text-align: center;
+  }
+
+  .risk-content .risk-info .underline {
+    left: 30%;
+  }
+
+  .risk-image {
+    margin: auto;
+  }
+
+  .prevention-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .message {
+    left: 35%;
+  }
+  /*--========== Risk Section End ==========--*/
+
+  /*--========== Footer Section ==========--*/
+
+  .footer-content {
+    padding: 40px 0px;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  .about-info p {
+    max-width: 450px;
+  }
+
+  .newsLetter-content {
+    grid-row: 1;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .links-content {
+    margin-bottom: 40px;
+  }
+
+  .about-social-media {
+    position: absolute;
+    bottom: 20px;
+    margin-top: 20px;
+  }
+
+  /*--========== Footer Section END ==========--*/
+}
+
+@media (max-width: 600px) {
+  /*--========== Banner Section ==========--*/
+  .banner-text {
+    margin-top: 50px;
+  }
+
+  .banner-content .banner-title {
+    font-size: 2.5rem;
+    width: 280px;
+  }
+
+  .covid-cases .covid img {
+    width: 50px;
+  }
+
+  .covid-cases .covid h2 {
+    font-size: 1rem;
+  }
+  /*--========== Banner Section END ==========--*/
+
+  /*--========== About Section ==========--*/
+  .covid-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .covid-info .underline {
+    top: 40px;
+  }
+
+  .covid-info p {
+    font-size: 0.9rem;
+  }
+  /*--========== About Section END ==========--*/
+
+  /*--========== Symptoms Section ==========--*/
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+
+  .symptoms-content .underline {
+    top: 27px;
+    left: 80px;
+    width: 30%;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .symptoms h2 {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+
+  .symptoms p {
+    font-size: 0.9rem;
+  }
+
+  .symptoms .underline {
+    top: 70px;
+    width: 30%;
+  }
+
+  .list-symptoms .list .list-info h3 {
+    font-size: 1rem;
+  }
+
+  .list-symptoms .list .list-info p {
+    font-size: 0.8rem;
+  }
+  /*--========== Symptoms Section END ==========--*/
+
+  /*--========== Prevention Section ==========--*/
+  .prevention-content .underline {
+    top: 30px;
+  }
+
+  .prevention-content .text {
+    font-size: 0.9rem;
+  }
+  /*--========== Prevention Section END ==========--*/
+
+  /*--========== Risk Section ==========--*/
+  .risk-content .risk-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .risk-content .risk-info .underline {
+    top: 30px;
+  }
+
+  .risk-content .risk-info p {
+    font-size: 0.9rem;
+  }
+  /*--========== Risk Section END ==========--*/
+
+  /*--========== News Section ==========--*/
+
+  .news-content .underline {
+    top: 30px;
+    left: 30%;
+    width: 30%;
+  }
+
+  .news-content p {
+    padding: 0 1rem;
+  }
+
+  /*--========== News Section END ==========--*/
+}
+
+@media (max-width: 400px) {
+  /*--========== Prevention Section ==========--*/
+  .prevent .prevent-info span {
+    font-size: 0.9rem;
+  }
+
+  .prevent .prevent-info p {
+    font-size: 0.7rem;
+  }
+
+  .prevent .prevent-img {
+    width: 70px;
+  }
+
+  .prevent .prevent-img img {
+    display: block;
+    margin: auto;
+  }
+  /*--========== Prevention Section END ==========--*/
+}
