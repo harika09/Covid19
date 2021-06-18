@@ -72,14 +72,13 @@ loadCountry().catch(error =>{
 
 
 async function worldCases(){
-    const api_URL = "https://coronavirus-19-api.herokuapp.com/all";
+    const api_URL = "https://disease.sh/v3/covid-19/all";
     const response = await fetch(api_URL)
     let data = await response.json()
    
     totalCases.innerHTML = formatNumber(data.cases);
     recovered.innerHTML = formatNumber(data.recovered);
-    deceased.innerHTML = formatNumber(data.deaths)
-  
+    deceased.innerHTML = formatNumber(data.deaths)  
 
    // console.log(data[32].country)
 
@@ -87,12 +86,11 @@ async function worldCases(){
     $(recovered).counterUp({delay:10, time:1000});
     $(deceased).counterUp({delay:10, time:1000});
     
-    displayData(data)
     //console.log(data.cases);
 }
 
 worldCases().catch(error => {
-    console.log('error');
+    console.log(error);
 });
 
 
