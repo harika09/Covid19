@@ -4,11 +4,12 @@ var mySwiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   direction: "horizontal",
   loop: true,
+  observer: true,
+  observeParents: true,
 
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
   },
 
   //AutoPlay

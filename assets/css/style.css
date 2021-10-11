@@ -73,7 +73,7 @@ header {
 
 header.sticky {
   background-color: var(--White-color);
-  padding: 20px 20px;
+  padding: 10px 10px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -871,13 +871,13 @@ input[type="email"] {
     position: relative;
     width: 50px;
     height: 30px;
-    background: url(/assets/img/icon-hamburger.svg) no-repeat;
+    background: url(/assets/img/icon-hamburger.svg) no-repeat center;
     background-size: 25px;
     cursor: pointer;
   }
 
   .menu-toggle.active {
-    background: url(/assets/img/icon-close.svg) no-repeat;
+    background: url(/assets/img/icon-close.svg) no-repeat center;
     background-size: 25px;
   }
 
