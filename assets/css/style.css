@@ -73,7 +73,7 @@ header {
 
 header.sticky {
   background-color: var(--White-color);
-  padding: 10px 10px;
+  padding: 15px 10px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -447,6 +447,8 @@ header.sticky .nav-menu li .nav-active {
 .corona-symptoms {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
 }
 
 .symptoms {
@@ -477,7 +479,8 @@ header.sticky .nav-menu li .nav-active {
 .doctor-woman img {
   display: block;
   max-width: 160px;
-  height: auto;
+  height: 400px;
+  object-fit: contain;
   margin: auto;
 }
 
@@ -975,14 +978,12 @@ input[type="email"] {
   }
 
   .symptoms {
+    margin-top: 20px;
     padding-bottom: 40px;
   }
 
   .corona-symptoms .underline {
     width: 18%;
-  }
-  .corona-symptoms p {
-    max-width: 450px;
   }
 
   /*--========== Symptoms Section END ==========--*/
@@ -1183,12 +1184,15 @@ input[type="email"] {
 
 @media (max-width: 400px) {
   /*--========== Prevention Section ==========--*/
+  .prevent-info {
+    width: 80%;
+  }
   .prevent .prevent-info span {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 
   .prevent .prevent-info p {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 
   .prevent .prevent-img {
