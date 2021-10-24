@@ -631,6 +631,7 @@ header.sticky .nav-menu li .nav-active {
 .news-content {
   margin-top: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 .news-content .underline {
